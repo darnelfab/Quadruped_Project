@@ -1,0 +1,14 @@
+controller_list:
+  - name: fake_quadruped_controller
+    joints:
+      - joint_left_h1
+      - joint_left_k1
+      - joint_left_h2
+      - joint_left_k2
+      - joint_right_h1
+      - joint_right_k1
+      - joint_right_h2
+      - joint_right_k2
+initial:  # Define initial robot poses.
+  - group: quadruped
+    pose: default_stand
