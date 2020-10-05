@@ -1,7 +1,7 @@
 # Simulation settings for using moveit_sim_controllers
 moveit_sim_hw_interface:
-  joint_model_group: quadruped
-  joint_model_group_pose: default_stand
+  joint_model_group: left_hip_knee_1
+  joint_model_group_pose: left_hip_knee_1_fwd
 # Settings for ros_control_boilerplate control loop
 generic_hw_control_loop:
   loop_hz: 300
@@ -24,16 +24,31 @@ joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50
 controller_list:
-  - name: quadruped_controller
+  - name: left_hip_knee_1_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
     joints:
       - joint_left_h1
       - joint_left_k1
+  - name: left_hip_knee_2_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
       - joint_left_h2
       - joint_left_k2
+  - name: Right_hip_knee_1_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
       - joint_right_h1
       - joint_right_k1
+  - name: Right_hip_knee_2_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
       - joint_right_h2
       - joint_right_k2

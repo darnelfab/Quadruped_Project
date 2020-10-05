@@ -1,0 +1,7 @@
+<launch>
+
+<node name="body_controller" pkg="udm_project_control" type="indirect_kin_service.py">
+	<param name="group_name" value="body"/>
+</node>
+
+</launch>

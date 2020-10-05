@@ -1,0 +1,4 @@
+<launch>
+<node name="quadruped_controller" pkg="udm_project_control" type="quadruped_control.py" />
+
+</launch>

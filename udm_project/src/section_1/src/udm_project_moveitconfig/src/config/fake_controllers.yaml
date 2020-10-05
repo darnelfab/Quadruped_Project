@@ -1,8 +1,8 @@
 controller_list:
-  - name: fake_one_leg_robot_controller
+  - name: fake_body_controller
     joints:
       - joint_left_h1
       - joint_left_k1
 initial:  # Define initial robot poses.
-  - group: one_leg_robot
-    pose: zero_configuration
+  - group: body
+    pose: zero_config
